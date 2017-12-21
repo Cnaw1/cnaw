@@ -207,11 +207,11 @@ local G
 function G(y, z)
   local pvs = redis:smembers("tabchi:" .. tabchi_id .. ":pvis")
   for d = 1, #pvs do
-    tdcli.addChatMember(y.chat_id, pvs[d], 50)
+    tdcli.addChatMember(y.chat_id, pvs[d], 9999999)
   end
   local H = z.total_count_
   for d = 0, tonumber(H) - 1 do
-    tdcli.addChatMember(y.chat_id, z.users_[d].id_, 50)
+    tdcli.addChatMember(y.chat_id, z.users_[d].id_, 9999999)
   end
 end
 local I
